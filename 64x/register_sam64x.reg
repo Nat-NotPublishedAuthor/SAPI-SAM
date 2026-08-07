@@ -1,0 +1,38 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\Software Automatic Mouth]
+@="Software Automatic Mouth (SAM)"
+"CLSID"="{A9234856-7812-4ABC-9123-ABCDEF123456}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\Software Automatic Mouth]
+@="Software Automatic Mouth (SAM)"
+"CLSID"="{A9234856-7812-4ABC-9123-ABCDEF123456}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\Software Automatic Mouth\Attributes]
+"Name"="Software Automatic Mouth"
+"Language"="409"
+"Gender"="Male"
+"Age"="Adult"
+"Vendor"="Commodor"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\SPEECH\Voices\Tokens\Software Automatic Mouth\Attributes]
+"Name"="Software Automatic Mouth"
+"Language"="409"
+"Gender"="Male"
+"Age"="Adult"
+"Vendor"="Commodor"
+
+[HKEY_CLASSES_ROOT\CLSID\{A9234856-7812-4ABC-9123-ABCDEF123456}]
+@="SamTTSEngine Class"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Classes\CLSID\{A9234856-7812-4ABC-9123-ABCDEF123456}]
+@="SamTTSEngine Class"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Classes\CLSID\{A9234856-7812-4ABC-9123-ABCDEF123456}\InprocServer32]
+@="path\to\SamSapi64.dll"
+"ThreadingModel"="Both"
+
+[HKEY_CLASSES_ROOT\CLSID\{A9234856-7812-4ABC-9123-ABCDEF123456}\InprocServer32]
+@="path\to\SamSapi64.dll"
+"ThreadingModel"="Both"
+
