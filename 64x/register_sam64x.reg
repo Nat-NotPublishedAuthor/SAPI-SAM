@@ -29,7 +29,7 @@ Windows Registry Editor Version 5.00
 @="SamTTSEngine Class"
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Classes\CLSID\{A9234856-7812-4ABC-9123-ABCDEF123456}\InprocServer32]
-@="path\to\SamSapi64.dll"
+@="path\to\SamSapi32.dll"
 "ThreadingModel"="Both"
 
 [HKEY_CLASSES_ROOT\CLSID\{A9234856-7812-4ABC-9123-ABCDEF123456}\InprocServer32]
