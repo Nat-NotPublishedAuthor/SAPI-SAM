@@ -15,5 +15,5 @@ Windows Registry Editor Version 5.00
 @="SamTTSEngine Class"
 
 [HKEY_CLASSES_ROOT\CLSID\{A9234856-7812-4ABC-9123-ABCDEF123456}\InprocServer32]
-@="D:\\Program Files (x86)\\Resanance\\SAM\\SamSapi.dll"
+@="path\to\SamSapi32.dll"
 "ThreadingModel"="Both"
