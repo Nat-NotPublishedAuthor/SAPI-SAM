@@ -1,1 +1,7 @@
+Windows Registry Editor Version 5.00
 
+[HKEY_CURRENT_USER\Software\Microsoft\Speech\Voices]
+"DefaultTokenId"="HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\Software Automatic Mouth"
+
+[HKEY_CURRENT_USER\SOFTWARE\WOW6432Node\Microsoft\Speech\Voices]
+"DefaultTokenId"="HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Speech\Voices\Tokens\Software Automatic Mouth"
