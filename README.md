@@ -24,9 +24,9 @@ You'll need to find a port of SAM in exe format, for that i personally recommend
 ## 2ⁿᵈ Step
 Place IN THE SAME FOLDER the exe with SamSapi64.dll and SamSapi32.dll if your system is 64 bit. If your system is 32 bit only place SamSapi32.dll and the exe.
 
-If you want to build SamSapi.dll yourself (WHY WOULD YOU DO THAT???) you need dllmain.cpp and sapiddk_compat in the same folder, then [w64devkit](https://github.com/skeeto/w64devkit) (EVEN THIS ISIN'T MINE!!!) if you want to build SamSapi64.dll. If you want to build SamSapi32.dll you need [mingw32](https://github.com/brechtsanders/winlibs_mingw/releases/download/16.1.0posix-14.0.0-ucrt-r4/winlibs-i686-posix-dwarf-gcc-16.1.0-mingw-w64ucrt-14.0.0-r4.7z)(Surprisingly it's not mine.)
+If you want to build SamSapi.dll yourself (WHY WOULD YOU DO THAT???) you need dllmain.cpp and sapiddk_compat.h in the same folder, then [w64devkit](https://github.com/skeeto/w64devkit) (EVEN THIS ISIN'T MINE!!!) if you want to build SamSapi64.dll. If you want to build SamSapi32.dll you need [mingw32](https://github.com/brechtsanders/winlibs_mingw/releases/download/16.1.0posix-14.0.0-ucrt-r4/winlibs-i686-posix-dwarf-gcc-16.1.0-mingw-w64ucrt-14.0.0-r4.7z)(Surprisingly it's not mine.)
 
-To build the 64 bit version, open w64devkit.exe, it will open a terminal where you got to browse to the path with your dllmain.cpp and sapiddk_compat and run: 
+To build the 64 bit version, open w64devkit.exe, it will open a terminal where you got to browse to the path with your dllmain.cpp and sapiddk_compat.h and run: 
 
 ```g++ -shared -o SamSapi.dll dllmain.cpp -lole32 -luuid -lsapi -loleaut32 -Wl,--add-stdcall-alias -Wl,--defsym,SPDFID_WaveFormatEx=0```
 
