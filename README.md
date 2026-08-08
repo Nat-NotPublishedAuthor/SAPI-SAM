@@ -42,7 +42,7 @@ After that in mingw32\bin the SamSapi32.dll will spawn.
 
 ## 3ʳᵈ Step
 
-Now open register_sam32/64.reg based on if your system is 32 or 64 bit, and apply the changes to the register and after that it'll be installed BUT for some reason you cant select it via the settings so you'll have to make it your default tts, to do that open default_sam32/64.reg based on the thingy, and apply the changes to the register.
+Now open register_sam32/64.reg based on if your system is 32 or 64 bit, making sure to modify the default paths, and apply the changes to the register and after that it'll be installed BUT for some reason you cant select it via the settings so you'll have to make it your default tts, to do that open default_sam32/64.reg based on the system, and apply the changes to the register.
 
 # WARNING
 
