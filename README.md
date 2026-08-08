@@ -1,5 +1,5 @@
 # SAPI-SAM
-A Windows Text-to-Speech (TTS) wrapper that ports SAM (Software Automatic Mouth) into Microsoft's SAPI (Speech Application Programming Interface). More simply a SAM TTS on Modern Windows.
+A Windows Text-to-Speech (TTS) wrapper that ports SAM (Software Automatic Mouth) into Microsoft's SAPI (Speech Application programming Interface). More simply a SAM TTS on Modern Windows.
 
 ## What is SAM?
 SAM (Software Automatic Mouth) is a small (39 KB to 50 KB) text-to-speech program released in 1982 created by Mark Barton for early personal computers like the Commodore 64, Atari, and Apple II.
@@ -7,7 +7,7 @@ SAM (Software Automatic Mouth) is a small (39 KB to 50 KB) text-to-speech progra
 An online version to try out can be found on this web site: http://simulationcorner.net/index.php?page=sam (NOT MINE!!!)
 
 ## Why do i need this port?
-SAM (Software Automatic Mouth) is a very old programm, not compatible with current Windows versions but here you can find a COM DLL that implements Microsoft's SAPI interfaces and routes text through the classic SAM programm, and instructions on how to set it all up.
+SAM (Software Automatic Mouth) is a very old program, not compatible with current Windows versions but here you can find a COM DLL that implements Microsoft's SAPI interfaces and routes text through the classic SAM program, and instructions on how to set it all up.
 
 TL;DR: Cuz SAM cant be a TTS on windows without this.
 
@@ -15,9 +15,9 @@ TL;DR: Cuz SAM cant be a TTS on windows without this.
 
 ### WARNING: THE INSTALLER ALREDY DOES ALL OF THIS AUTOMATICALLY. DO THIS ONLY IF YOU HATE YOURSELF.
 
-## 1ᵗʰ Step
+## 1ˢᵗ Step
 
-You'll need to find a port of SAM in exe format, for that i personally reccommend you check out https://github.com/s-macke/SAM (ALSO NOT MINE!!!).
+You'll need to find a port of SAM in exe format, for that i personally recommend you check out https://github.com/s-macke/SAM (ALSO NOT MINE!!!).
 
 ## 2ⁿᵈ Step
 Place IN THE SAME FOLDER the exe with SamSapi64.dll/SamSapi32.dll based on if your system is 32 or 64 bit.
@@ -32,11 +32,11 @@ After that in the same path of your dllmain.cpp and sapiddk_compat the SamSapi64
 
 If instead you want to build the 32 bit version you need to put dllmain.cpp and sapiddk_compat in mingw32\bin. Then you need to open a cmd there and run:
 
-```& "D:\Program Files (x86)\Resanance\SAM\src\mingw32\bin\g++.exe" -shared -o SamSapi32.dll dllmain.cpp -lole32 -luuid -lsapi -loleaut32 "-Wl,--add-stdcall-alias" "-Wl,--defsym,SPDFID_WaveFormatEx=0"```
+```& "g++.exe" -shared -o SamSapi32.dll dllmain.cpp -lole32 -luuid -lsapi -loleaut32 "-Wl,--add-stdcall-alias" "-Wl,--defsym,SPDFID_WaveFormatEx=0"```
 
 After that in mingw32\bin the SamSapi32.dll will spawn.
 
-(WARNING: sam.exe AND SamSapi64/32.dll MUST BE IN THE SAME PATH  OR IT WILL NOT WORK.)
+(WARNING: sam.exe AND SamSapi64/32.dll MUST BE IN THE SAME PATH OR IT WILL NOT WORK.)
 
 ## 3ʳᵈ Step
 
