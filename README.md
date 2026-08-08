@@ -13,24 +13,34 @@ TL;DR: Cuz SAM cant be a TTS on windows without this.
 
 # Compile
 
+### WARNING: THE INSTALLER ALREDY DOES ALL OF THIS AUTOMATICALLY. DO THIS ONLY IF YOU HATE YOURSELF.
+
 ## 1ᵗʰ Step
 
-You'll need to find a port of SAM in EXE format, for that i personally reccommend you check out https://github.com/s-macke/SAM (ALSO NOT MINE!!!).
+You'll need to find a port of SAM in exe format, for that i personally reccommend you check out https://github.com/s-macke/SAM (ALSO NOT MINE!!!).
 
 ## 2ⁿᵈ Step
-Place the EXE in C:\SAM\sam.exe with SamSapi.dll.
+Place IN THE SAME FOLDER the exe with SamSapi64.dll/SamSapi32.dll based on if your system is 32 or 64 bit.
 
-If you want to change the location you must download both dllmain.cpp and sapiddk_compat.h in the folder you want to install them to, then modify line 83 with the path to that folder, after that you will need to download w64devkit (https://github.com/skeeto/w64devkit) (EVEN THIS ISIN'T MINE!!!) and open w64devkit.exe, it will open a terminal where you got to browse to the path with your dllmain.cpp and sapiddk_compat and run:
+If you want to build SamSapi.dll yourself (WHY WOULD YOU DO THAT???) you need dllmain.cpp and sapiddk_compat in teh same folder, then [w64devkit](https://github.com/skeeto/w64devkit) (EVEN THIS ISIN'T MINE!!!) if you want to build SamSapi64.dll. If you want to build SamSapi32.dll you need [mingw32](https://github.com/brechtsanders/winlibs_mingw/releases/download/16.1.0posix-14.0.0-ucrt-r4/winlibs-i686-posix-dwarf-gcc-16.1.0-mingw-w64ucrt-14.0.0-r4.7z)(Surprisingly it's not mine.)
+
+To build the 64 bit version, open w64devkit.exe, it will open a terminal where you got to browse to the path with your dllmain.cpp and sapiddk_compat and run: 
 
 ```g++ -shared -o SamSapi.dll dllmain.cpp -lole32 -luuid -lsapi -loleaut32 -Wl,--add-stdcall-alias -Wl,--defsym,SPDFID_WaveFormatEx=0```
 
-After that in the same path your custom SamSapi.dll will spawn.
+After that in the same path of your dllmain.cpp and sapiddk_compat the SamSapi64.dll will spawn.
 
-(WARNING: sam.exe AND SamSapi.dll MUST BE IN THE PATH YOU CHOSE OR IT WILL NOT FIND THEM.)
+If instead you want to build the 32 bit version you need to put dllmain.cpp and sapiddk_compat in mingw32\bin. Then you need to open a cmd there and run:
+
+```& "D:\Program Files (x86)\Resanance\SAM\src\mingw32\bin\g++.exe" -shared -o SamSapi32.dll dllmain.cpp -lole32 -luuid -lsapi -loleaut32 "-Wl,--add-stdcall-alias" "-Wl,--defsym,SPDFID_WaveFormatEx=0"```
+
+After that in mingw32\bin the SamSapi32.dll will spawn.
+
+(WARNING: sam.exe AND SamSapi64/32.dll MUST BE IN THE SAME PATH  OR IT WILL NOT WORK.)
 
 ## 3ʳᵈ Step
 
-Now open register_sam.reg and apply the changes to the register and after that it'll be installed BUT for some reason you cant select it via the settings so you'll have to make it your default tts, to do that open default_sam.reg and apply the changes to the register.
+Now open register_sam32/64.reg based on if your system is 32 or 64 bit, and apply the changes to the register and after that it'll be installed BUT for some reason you cant select it via the settings so you'll have to make it your default tts, to do that open default_sam32/64.reg based on the thingy, and apply the changes to the register.
 
 # WARNING
 
