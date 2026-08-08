@@ -15,6 +15,8 @@ TL;DR: Cuz SAM cant be a TTS on windows without this.
 
 ### WARNING: THE INSTALLER ALREDY DOES ALL OF THIS AUTOMATICALLY. DO THIS ONLY IF YOU HATE YOURSELF.
 
+> The setup.iss script in the repository is provided so you can see what the installer does, but it WILL NOT work on your computer unless you have san.exe, SamSapi64.dll and SamSapi32.dll in the directory it requires. Use the SAPI-SAM-Installer.exe in the releases tab.
+
 ## 1ˢᵗ Step
 
 You'll need to find a port of SAM in exe format, for that i personally recommend you check out https://github.com/s-macke/SAM (ALSO NOT MINE!!!).
